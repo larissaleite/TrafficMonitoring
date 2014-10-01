@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Enactor xmlns="http://www.contexttoolkit.org/ctk" name="AccidentEnactor">
+
+	<InWidget  href="accident-widget-input.xml" />
+	<OutWidget href="accident-widget-output.xml" />
+	
+	<OutcomeName>message</OutcomeName>
+	
+	
+	<Reference name="Accident">
+		<Query name="Accident">
+			( AND
+				(EQUAL notifications true)
+				(EQUAL isAccident true)
+				
+			)
+		</Query>
+		<Outcome outAttribute="message">"isFire-"+area</Outcome>
+		<ServiceInput service="AccidentService" function="accidentControl">
+			<Attribute name="message" />
+		</ServiceInput>
+	</Reference>
+	
+	<Reference name="noAccident">
+		<Query name="noAccident">
+			(  AND
+				(EQUAL notifications true)
+				(EQUAL isAccident false)
+			)
+		</Query>
+		<Outcome outAttribute="message">"is not Fire-"+area</Outcome>
+		<ServiceInput service="AccidentService" function="accidentControl">
+			<Attribute name="message" />
+		</ServiceInput>
+	</Reference>
+	
+
+</Enactor>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Widget xmlns="http://www.contexttoolkit.org/ctk" name="AccidentWidget">
+	<Attributes>
+		<Attribute name="isAccident" type="boolean" />
+		<Attribute name="notificatons" type="boolean" />
+	</Attributes>
+</Widget>

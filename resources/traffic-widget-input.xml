@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Widget xmlns="http://www.contexttoolkit.org/ctk" name="TrafficWidget">
+	<Attributes>
+		<Attribute name="via" type="int"></Attribute>
+		<Attribute name="carros" type="int"></Attribute>
+		<Attribute name="notifications" type="boolean"></Attribute>
+	</Attributes>
+</Widget>

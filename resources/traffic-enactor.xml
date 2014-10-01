@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Enactor xmlns="http://www.contexttoolkit.org/ctk" name="TrafficEnactor">
+
+	<InWidget  href="traffic-widget-input.xml" />
+	<OutWidget href="traffic-widget-output.xml" />
+
+	<OutcomeName>carros</OutcomeName>
+	<OutcomeName>via</OutcomeName>
+	
+	<Reference name="ViaLivre">
+		<Query name="ViaLivre">
+			( AND
+				(GREATER_EQUAL carros 0)
+				(LESS carros 10)
+				(EQUAL notifications true)
+				
+			)
+		</Query>
+		<Outcome outAttribute="message">via+"-"+carros</Outcome>
+		<ServiceInput service="TrafficService" function="trafficControl">
+			<Attribute name="message" />
+		</ServiceInput>
+	</Reference>
+	
+	<Reference name="ViaCongestionada">
+		<Query name="ViaCongestionada">
+			(AND
+				(GREATER carros 10)
+				(EQUAL notifications true)
+			)
+		</Query>
+		<Outcome outAttribute="message">via+"-"+carros</Outcome>
+		<ServiceInput service="TrafficService" function="trafficControl">
+			<Attribute name="message" />
+		</ServiceInput>
+	</Reference>
+
+</Enactor>
