@@ -16,7 +16,7 @@
 				
 			)
 		</Query>
-		<Outcome outAttribute="message">via+"-"+carros</Outcome>
+		<Outcome outAttribute="message">via+"-"+carros+"-LIVRE"</Outcome>
 		<ServiceInput service="TrafficService" function="trafficControl">
 			<Attribute name="message" />
 		</ServiceInput>
@@ -29,7 +29,7 @@
 				(EQUAL notifications true)
 			)
 		</Query>
-		<Outcome outAttribute="message">via+"-"+carros</Outcome>
+		<Outcome outAttribute="message">via+"-"+carros+"-CONGESTIONADA"</Outcome>
 		<ServiceInput service="TrafficService" function="trafficControl">
 			<Attribute name="message" />
 		</ServiceInput>

@@ -34,7 +34,7 @@ public class TrafficService extends Service {
 		String message = input.getInput().getAttributeValue("message");
 		
         String valores[] = message.split("-");
-        secretariaTransporte.atualizar(Integer.parseInt(valores[0]), Integer.parseInt(valores[1]), false);
+        secretariaTransporte.atualizar(Integer.parseInt(valores[0]), Integer.parseInt(valores[1]), valores[2]);
   
 		return null;
 	}

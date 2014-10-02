@@ -17,8 +17,8 @@ public class SecretariaTransporteApplication implements AtualizacaoCongestioname
 	}
 
 	@Override
-	public void atualizar(int via, int quantCarros, boolean isAccident) {
-		System.out.println("Via "+via+"  Carros: "+quantCarros);
+	public void atualizar(int via, int quantCarros, String situacao) {
+		System.out.println("Via "+via+" - "+situacao+"  Carros: "+quantCarros);
 		
 	}
 	
