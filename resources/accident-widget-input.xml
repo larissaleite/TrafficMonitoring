@@ -3,6 +3,6 @@
 	<Attributes>
 		<Attribute name="via" type="int" />
 		<Attribute name="isAccident" type="boolean" />
-		<Attribute name="notificatons" type="boolean" />
+		<Attribute name="notifications" type="boolean" />
 	</Attributes>
 </Widget>

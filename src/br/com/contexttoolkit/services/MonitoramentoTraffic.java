@@ -17,7 +17,6 @@ public class MonitoramentoTraffic implements Monitoramento {
 		Discoverer.start();
 		
 		trafficInput = WidgetXmlParser.createWidget("resources/traffic-widget-input.xml");
-		trafficInput.updateData("notifications", false);
 		trafficWidget = WidgetXmlParser.createWidget("resources/traffic-widget-output.xml");
 		trafficEnactor = EnactorXmlParser.createEnactor("resources/traffic-enactor.xml");
 		
