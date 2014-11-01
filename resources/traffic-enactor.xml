@@ -11,7 +11,7 @@
 		<Query name="ViaLivre">
 			( AND
 				(GREATER_EQUAL carros 0)
-				(LESS carros 10)
+				(LESS carros 30)
 				(EQUAL notifications true)
 				
 			)
@@ -25,7 +25,7 @@
 	<Reference name="ViaCongestionada">
 		<Query name="ViaCongestionada">
 			(AND
-				(GREATER carros 10)
+				(GREATER carros 30)
 				(EQUAL notifications true)
 			)
 		</Query>
@@ -34,5 +34,4 @@
 			<Attribute name="message" />
 		</ServiceInput>
 	</Reference>
-
 </Enactor>

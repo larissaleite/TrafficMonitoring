@@ -1,6 +1,5 @@
 package br.com.contexttoolkit.services;
 
-import context.arch.discoverer.Discoverer;
 import context.arch.enactor.Enactor;
 import context.arch.enactor.EnactorXmlParser;
 import context.arch.widget.Widget;
@@ -14,7 +13,6 @@ public class MonitoramentoTraffic implements Monitoramento {
 	private TrafficService trafficService;
 	
 	public MonitoramentoTraffic() {
-		Discoverer.start();
 		
 		trafficInput = WidgetXmlParser.createWidget("resources/traffic-widget-input.xml");
 		trafficWidget = WidgetXmlParser.createWidget("resources/traffic-widget-output.xml");
@@ -33,8 +31,6 @@ public class MonitoramentoTraffic implements Monitoramento {
 		
 		trafficInput.updateData("via", via);
 		trafficInput.updateData("carros", quantCarros);
-		trafficInput.updateData("notifications", true);
-		trafficInput.updateData("notifications", false);
 		
 	}
 
