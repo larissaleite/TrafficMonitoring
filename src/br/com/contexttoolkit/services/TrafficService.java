@@ -28,7 +28,6 @@ public class TrafficService extends Service {
 		
 		String message = input.getInput().getAttributeValue("message");
 		
-        String valores[] = message.split("-");
         System.out.println("service----"+message);
         
 		return null;

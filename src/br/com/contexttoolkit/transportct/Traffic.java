@@ -14,13 +14,12 @@ public class Traffic {
 
 	public static void main(String[] args) {
 		
+		Monitoramento monitoramentoTraffic;
 		Discoverer.start();
-		
-    	Monitoramento monitoramentoTraffic = new MonitoramentoTraffic();
-    	monitoramentoTraffic.atualizarInformacoes("2-50");
-		
-		//SensorCarros sensor = new SensorCarros();
-		//sensor.gerarDados(monitoramentoTraffic);
+		monitoramentoTraffic = new MonitoramentoTraffic();
+		System.out.println();
+		SensorCarros sensor = new SensorCarros();
+		sensor.gerarDados((MonitoramentoTraffic)monitoramentoTraffic);
 	}
 
 }

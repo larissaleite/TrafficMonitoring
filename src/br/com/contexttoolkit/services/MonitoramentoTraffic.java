@@ -15,6 +15,7 @@ public class MonitoramentoTraffic implements Monitoramento {
 	public MonitoramentoTraffic() {
 		
 		trafficInput = WidgetXmlParser.createWidget("resources/traffic-widget-input.xml");
+		trafficInput.updateData("notifications", false);
 		trafficWidget = WidgetXmlParser.createWidget("resources/traffic-widget-output.xml");
 		trafficEnactor = EnactorXmlParser.createEnactor("resources/traffic-enactor.xml");
 		
@@ -28,10 +29,10 @@ public class MonitoramentoTraffic implements Monitoramento {
 		String[] str = message.split("-");
 		int via = Integer.parseInt(str[0]);
 		int quantCarros = Integer.parseInt(str[1]);
-		
 		trafficInput.updateData("via", via);
 		trafficInput.updateData("carros", quantCarros);
-		
+		trafficInput.updateData("notifications", true);
+		trafficInput.updateData("notifications", false);
 	}
 
 }

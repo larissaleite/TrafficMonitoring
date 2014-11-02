@@ -17,10 +17,10 @@ public class SensorCarros {
         	int carros = rand.nextInt(51);
         	
         	System.out.println("gerador --- "+via+"--"+carros);
-        	monitoramentoTraffic.atualizarInformacoes(via+"-"+carros);
+        	monitoramentoTraffic.atualizarInformacoes(Integer.toString(via)+"-"+Integer.toString(carros));
         	
             try {
-                Thread.sleep(5000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {}
         }
         
